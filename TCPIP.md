@@ -212,12 +212,57 @@ Localhost represents the computer/server itself with IP address 127.0.0.1.
 If you're familiar with SQL-PHP manipulations, then you must have seen it before.
 
 ## Topic 5 -- Internet Protocol (IP)
+> Opening Question: </br>
+> What is IP? And why we need IPv6? </br>
+> What does those number sequences set in 網路共和中心 mean when I applied for 宿網 ? </br>
+> What's the difference between "http://www.google.com.tw" and "74.125.203.94"? </br>
+> Do I have IP when I use WiFi in the MRT station? </br>
+
 #### 5.1 IPv4 and IPv6
+IPv4 is a 32-bit sequence, representing a specific device connected to the Internet. 
+We ususally divide them into four segments, and represent them in decimals, e.g. 140.114.24.31.
+IPv6 has more bits (128 bits) than IPv4, pointing out the dramatic increase of web-connected devices,
+including laptops, smart phones, and even Internet of Things (IoT).
+
+We can Imagine IP as your home address. We divide IP into "classes": </br>
+1. Class A:   0.xxx.xxx.xxx </br>
+2. Class B: 128.xxx.xxx.xxx </br>
+3. Class C: 192.xxx.xxx.xxx </br>
+4. Class D: 224.xxx.xxx.xxx </br>
+5. Class E: 240.xxx.xxx.xxx </br>
+We now are able to go on for other facts. 
+
 #### 5.2 Domain
+Domain acts as the size of your house, many people (IPs) live inside.
+For instance, we're using IPs starting with 140.114.
+
 #### 5.3 Netmask
+This is the most amazing part in IP division.
+Netmask can divide IPs in a certain domain into smaller parts, according to user needs.
+We can divide the whole IP address into two parts: NetID and HostID.
+* NetID = IP address & Netmask: smaller room separated inside a certain house (domain)
+* HostID = IP address & (^Netmask): number of students (IP) in this dorm (subnet)
+
+However, we need "broadcasting IP" and "server IP" in every subnet,
+so the minimum size of HostID is 2 bits. More about IP broadcasting will be discussed in later sections.
+If you are really interested in this topic, please visit: http://linux.vbird.org/linux_server/0110network_basic/0110network_basic-centos4.php#ipandmac_netmask .
+
 #### 5.4 Gateway/Router
+Gateway/Router is your front door, connecting your house to the outside world.
+Usually a "switch" is utilized to make full and efficient use of the IPs.
+Some issues relating to broadcasting is also done with the help of routers.
+
 #### 5.5 Domain Name Server (DNS)
+You will probably ask, "Do people really memorize those IP address and then get access to the website?".
+Well, you can just type "www.google.com.tw" to get there instead of typing "74.125.203.94".
+Thanks to DNS, they do the interpretation from words to IPs.
+
 #### 5.6 Dynamic Host Configuration Protocol (DHCP)
+Whenever you get your device connected to the Internet, it must have an IP.
+Imaging in free WiFi zone somewhere inside the MRT station, 
+if we only divide the subnet such that only 6 people (3-bit HostID) can have access to the WiFi router,
+and now I have the 7th person wanting to connect to the WiFi too, what should we do?
+Don't worry, we can dynamically allocate IPs: http://linux.vbird.org/linux_server/0340dhcp.php#theory .
 
 ## Topic 6 -- Netwrok Hardwares
 #### 6.1 Switch/Hub/Router

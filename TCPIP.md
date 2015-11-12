@@ -23,7 +23,7 @@ that results in today's TCP/IP and other network frameworks.
 The main topic is IP and the overall structure of Internet (connections).
 Finally, this handout will end up in something about UDP, DNS, TCP, etc.
 
-> Additional information is provided <a href="#">here</a> for further references.
+> Additional information is provided <a href="Presentation_20150708.pdf">here</a> for further references.
 > Note that this PDF is only for students in this club.
 
 #### Contents
@@ -91,9 +91,9 @@ Thanks to hakers, the standard for Internet and Ethernet was established by IEEE
 
 ## Topic 2 -- Introduction to Open System Interconnection (OSI)
 > Opening Questions: </br>
-> What's the prototype of TCP/IP protocols?
-> What elements make up to a basic but complete network?
-> Why OSI and its "descendants" are of great importance?
+> What's the prototype of TCP/IP protocols?　</br>
+> What elements make up to a basic but complete network? </br>
+> Why OSI and its "descendants" are of great importance? </br>
 
 #### 2.1 Components Comprising the Web
 * Node: devices with IP
@@ -105,7 +105,7 @@ Thanks to hakers, the standard for Internet and Ethernet was established by IEEE
 At the beginning, we devide the networking application into seven layers,
 with Layer 1 closest to the hardware and Layer closest to software, so to speak.
 The overall structure is shown below.</br>
-<img src="OSI.jpg"/></br>
+<img src="OSI.gif"/></br>
 We're not going into details of these seven scray layers, 
 please visit http://www.webopedia.com/quick_ref/OSI_Layers.asp for further reference.
 

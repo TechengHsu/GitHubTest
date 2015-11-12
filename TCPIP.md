@@ -150,6 +150,46 @@ UDP is faster in terms of data transfer since it does not have sever/response ch
 This is applicable in LIVE media streams.
 
 #### 3.3 (optional) Sockets
+Here comes the interesting part. Once you set up your own server on your PC/laptop,
+you can try out "BSD Unix Socket": https://en.wikipedia.org/wiki/Berkeley_sockets .
+Some other comparision between TCP, Sockets, and Internet Sockets (not really that important):
+http://stackoverflow.com/questions/22897972/unix-vs-bsd-vs-tcp-vs-internet-sockets .
+You can use socket to build your own chat room!
+Here are the facts that you need to know:
+* two programs needed: one as client and the other acts as server
+* programming language used: C/C++, Java, PHP, etc.
+* to construct multi-user server, you need to know mutex and pthread (for example, in C)
+To start chatting, you need to specify the IP address and the port that the server will listen to (to be discussed),
+and transfer data by pairs of read() and write(). Here's some code abstracted from my project:
+
+Server.c (return 1 on error for now)
+```
+	// creating TCP socket
+	iSockFD=socket(AF_INET,SOCK_STREAM,0);
+	if (iSockFD<0)  return 1;
+
+	setsockopt(iSockFD,SOL_SOCKET,SO_REUSEADDR,(const char*)&n,sizeof(n));
+	memset((char*)&sLocalAddr,0,sizeof(sLocalAddr));
+	sLocalAddr.sin_family=AF_INET;
+	//sLocalAddr.sin_len=sizeof(sLocalAddr);
+	sLocalAddr.sin_port=htons(5050);
+	sLocalAddr.sin_addr.s_addr=htonl(INADDR_ANY);
+	iAddrSize=sizeof(sLocalAddr);
+
+	// binding to Server
+	iStatus=bind(iSockFD,(struct sockaddr*)&sLocalAddr,iAddrSize);
+	if (iStatus<0)  return 1;
+	//printf("Bind Success\n");
+
+	// start listening to port 5001
+	iStatus=listen(iSockFD,20);  // 5 or SOMAXCONN
+	if (iStatus!=0)  return 1;
+	printf("Listening to Port 5050\n");
+```
+
+For beginners, it's better to start with PHP sockets since they're much easier: 
+http://php.net/manual/en/book.sockets.php .
+
 
 ## Topic 4 --  Hypertext Transmission Protocol (HTTP) and HTTPS
 #### 4.1 Introduction to HTTP

@@ -54,7 +54,7 @@ Finally, this handout will end up in something about UDP, DNS, TCP, etc.
   * Dynamic Host Configuration Protocol (DHCP)
 * Topic 6 -- Netwrok Hardwares
   * Switch/Hub/Router
-  * Sample Network Structure: as a Company
+  * Sample Network Structure: as a Home
 * Topic 7 -- Other Relating Topics
   * Multiple Sense Multiple Access with Collision Detection (CSMA/CD)
   * (Reverse) Address Resolution Protocol (RARP/ARP)
@@ -272,7 +272,7 @@ Don't worry, we can dynamically allocate IPs: http://linux.vbird.org/linux_serve
 When received packages, the destination address will be broadcast to all the devices in this domain.
 Please google "Routing Table" for further information.
 
-#### 6.2 Sample Network Structure: as a Company
+#### 6.2 Sample Network Structure: as a Home
 Consider this case:
 * what you already have:
 	* installed Hinet fiber with 1 dynamic IP
@@ -291,5 +291,14 @@ the requirements are achieved. More details at http://linux.vbird.org/linux_serv
 > Do we reach the end of this handout? </br>
 
 #### 7.1 Multiple Sense Multiple Access with Collision Detection (CSMA/CD)
+(pp. 17-19 in the provided PDF file)
+
 #### 7.2 (Reverse) Address Resolution Protocol (RARP/ARP)
+(pp. 20-21 in the provided PDF file)
+
 #### 7.3 Internet Control Message Protocol (ICMP)
+(pp. 22 in the provided PDF file)
+
+## Conclusion
+We have traveled through various relating to the important topics in Computer Networks,
+and I hope you have enjoyed them.

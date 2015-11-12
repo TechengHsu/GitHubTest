@@ -25,6 +25,7 @@ Finally, this handout will end up in something about UDP, DNS, TCP, etc.
 
 > Additional information is provided <a href="Presentation_20150708.pdf">here</a> for further references.
 > Note that this PDF is only for students in this club.
+> You can also visit vBird's website for tons of information relating to this topic.
 
 #### Contents
 
@@ -39,10 +40,10 @@ Finally, this handout will end up in something about UDP, DNS, TCP, etc.
 * Topic 3 -- Transmission Control Protocol (TCP)
   * Three-Way Handshake
   * User Datagram Protocol (UDP)
+  * (optional) Sockets
 * Topic 4 -- Hypertext Transmission Protocol (HTTP) and HTTPS
   * Introduction to HTTP
   * Ports Commonly Used
-  * (optional) Sockets
   * Localhost
 * Topic 5 -- Internet Protocol (IP)
   * IPv4 and IPv6
@@ -88,6 +89,7 @@ nicknamed "Apache", meaning this is a server with lots of modification.
 
 #### 1.3 IEEE Standards
 Thanks to hakers, the standard for Internet and Ethernet was established by IEEE, remaining as the standard.
+To look at more details, please visit http://linux.vbird.org/linux_server/0360apache.php .
 
 ## Topic 2 -- Introduction to Open System Interconnection (OSI)
 > Opening Questions: </br>
@@ -111,25 +113,48 @@ please visit http://www.webopedia.com/quick_ref/OSI_Layers.asp for further refer
 
 #### 2.3 Simplification of OSI and Relating Motivation
 The complicated seven-layer OSI model was simplified to a four-layer structure.
-Basically, some similar functioning layers are combined, 
-1. Network Layer: data transmitted into devices
-2. Internet Layer: IP header, routing information
-3. Transport Layer: TCP/UDP, data flow
-4. Application Layer: interfaces
+Basically, some similar functioning layers are combined, </br>
+1. Network Layer: data transmitted into devices </br>
+2. Internet Layer: IP header, routing information </br>
+3. Transport Layer: TCP/UDP, data flow </br>
+4. Application Layer: interfaces </br>
 
 These four-layer structure forms the consisting TCP/IP protocols,
 which greatly simplifies programming efforts. (less "rigorous")
 With the addition of WWW and E-mail, this has become our current Internet structure.
 
 ## Topic 3 -- Transmission Control Protocol (TCP)
+> Opening Questions: </br>
+> How to define the way of communication?
+> What's a "packet"?
+> What information is needed for the packages to be transferred to the correct destinations?
+
 #### 3.1 Three-Way Handshake
+How's data transmitted from one place to another? Definitely, the source and destination "address" is needed.
+(the concept of "address" will be clear when we talk about IP) 
+Some additional controling codes are also needed for advanced functionalities.
+Furthermore, when the data is transferred from one place to another,
+there will definitely be some bits being contaminated, i.e., revesed or even missing.
+As a result, some correcting mechanisms should be implemented inside the packet.
+These additional bits resembles the concept of Error Correcting Codes (ECC),
+more on ECC: http://www.qrstuff.com/blog/2011/12/14/qr-code-error-correction .
+For more information about the bits added, please google "TCP Header".
+
+Three way handshake is the concept of data transfer based on "both aggreement".
+One initiates the sending request with a specific "Sequence Numner".
+Then the server will send a packet with special bits added and a new Sequence Number embedded back to the user.
+If the user send another packet back to the server and it's received by the server, connection's established.
+
 #### 3.2 User Datagram Protocol (UDP)
+UDP is faster in terms of data transfer since it does not have sever/response check.
+This is applicable in LIVE media streams.
+
+#### 3.3 (optional) Sockets
 
 ## Topic 4 --  Hypertext Transmission Protocol (HTTP) and HTTPS
 #### 4.1 Introduction to HTTP
 #### 4.2 Ports Commonly Used
-#### 4.3 (optional) Sockets
-#### 4.4 Localhost
+#### 4.3 Localhost
 
 ## Topic 5 -- Internet Protocol (IP)
 #### 5.1 IPv4 and IPv6

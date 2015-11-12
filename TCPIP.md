@@ -23,6 +23,9 @@ that results in today's TCP/IP and other network frameworks.
 The main topic is IP and the overall structure of Internet (connections).
 Finally, this handout will end up in something about UDP, DNS, TCP, etc.
 
+> Additional information is provided <a href="#">here</a> for further references.
+> Note that this PDF is only for students in this club.
+
 #### Contents
 
 * Topic 1 -- Historical Perspective
@@ -87,9 +90,36 @@ nicknamed "Apache", meaning this is a server with lots of modification.
 Thanks to hakers, the standard for Internet and Ethernet was established by IEEE, remaining as the standard.
 
 ## Topic 2 -- Introduction to Open System Interconnection (OSI)
+> Opening Questions: </br>
+> What's the prototype of TCP/IP protocols?
+> What elements make up to a basic but complete network?
+> Why OSI and its "descendants" are of great importance?
+
 #### 2.1 Components Comprising the Web
+* Node: devices with IP
+* Server: response
+* Client: e.g. workstation
+* Router/Gateway: connecting between two different interfaces, combining different groups of devices
+
 #### 2.2 Over View of OSI Layers
+At the beginning, we devide the networking application into seven layers,
+with Layer 1 closest to the hardware and Layer closest to software, so to speak.
+The overall structure is shown below.</br>
+<img src="OSI.jpg"/></br>
+We're not going into details of these seven scray layers, 
+please visit http://www.webopedia.com/quick_ref/OSI_Layers.asp for further reference.
+
 #### 2.3 Simplification of OSI and Relating Motivation
+The complicated seven-layer OSI model was simplified to a four-layer structure.
+Basically, some similar functioning layers are combined, 
+1. Network Layer: data transmitted into devices
+2. Internet Layer: IP header, routing information
+3. Transport Layer: TCP/UDP, data flow
+4. Application Layer: interfaces
+
+These four-layer structure forms the consisting TCP/IP protocols,
+which greatly simplifies programming efforts. (less "rigorous")
+With the addition of WWW and E-mail, this has become our current Internet structure.
 
 ## Topic 3 -- Transmission Control Protocol (TCP)
 #### 3.1 Three-Way Handshake

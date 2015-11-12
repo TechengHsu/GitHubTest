@@ -190,11 +190,26 @@ Server.c (return 1 on error for now)
 For beginners, it's better to start with PHP sockets since they're much easier: 
 http://php.net/manual/en/book.sockets.php .
 
-
 ## Topic 4 --  Hypertext Transmission Protocol (HTTP) and HTTPS
+> Opening Questions: </br>
+> What's the difference between HTTP and HTTPS? </br>
+> What is 80/8080 port? </br>
+
 #### 4.1 Introduction to HTTP
+This protocol was established to improve scientific research, and it belongs to the application layer.
+Detail information: https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol .
+
 #### 4.2 Ports Commonly Used
+What is port: https://en.wikipedia.org/wiki/Port_(computer_networking) .
+* 80: HTTP
+* 8080: tomcat likes it (?)
+* 20, 21: FTP
+
+More on port numbers: http://www.webopedia.com/quick_ref/portnumbers.asp .
+
 #### 4.3 Localhost
+Localhost represents the computer/server itself with IP address 127.0.0.1. 
+If you're familiar with SQL-PHP manipulations, then you must have seen it before.
 
 ## Topic 5 -- Internet Protocol (IP)
 #### 5.1 IPv4 and IPv6

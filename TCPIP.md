@@ -265,10 +265,31 @@ and now I have the 7th person wanting to connect to the WiFi too, what should we
 Don't worry, we can dynamically allocate IPs: http://linux.vbird.org/linux_server/0340dhcp.php#theory .
 
 ## Topic 6 -- Netwrok Hardwares
+> Opening Questions: </br>
+> Is there any example for subnet division in practice?
+
 #### 6.1 Switch/Hub/Router
+When received packages, the destination address will be broadcast to all the devices in this domain.
+Please google "Routing Table" for further information.
+
 #### 6.2 Sample Network Structure: as a Company
+Consider this case:
+* what you already have:
+	* installed Hinet fiber with 1 dynamic IP
+	* only one LAN port is available
+* what we want:
+	* PCs have cabled network
+	* notebooks have both wired and wireless network connections
+
+We can use Linux PC connected to the fiber and acts as a server,
+we then connects this server to a switch which has many ports.
+Connecting PCs with network cables and one WLAN AP (WiFi 分享器 ),
+the requirements are achieved. More details at http://linux.vbird.org/linux_server/0250simple_firewall.php#firewall_type .
 
 ## Topic 7 -- Other Relating Topics
+> Opening Questions: </br>
+> Do we reach the end of this handout? </br>
+
 #### 7.1 Multiple Sense Multiple Access with Collision Detection (CSMA/CD)
 #### 7.2 (Reverse) Address Resolution Protocol (RARP/ARP)
 #### 7.3 Internet Control Message Protocol (ICMP)
